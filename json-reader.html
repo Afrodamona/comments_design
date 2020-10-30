@@ -1,0 +1,53 @@
+
+<!-- load JS files jquery-3.3.1.min -->
+    <!-- <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>     -->
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>  
+
+<script type="text/javascript">
+    	//ajax page info load
+// another ajax reguest
+//
+
+$(init);
+
+
+function init(){
+
+		// var	obj = { "id": idd};
+		// var test = JSON.stringify(obj);
+
+    	var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+	  if (this.readyState == 4){
+
+
+	    // var data = JSON.parse(this.responseText);
+
+	    var post = xmlhttp.responseText;
+	    console.log(post);
+
+	    var data = JSON.parse(post);
+		// var post = data.post;
+
+	    alert(data[1].news);
+	    alert("is the ajax working");
+	    
+	    
+	    // $('#schfeesid').html(data[i]schfees_amt);
+
+
+	    //document.getElementById("schfeesbal").innerHTML = data.sname;// this also works
+
+	  }else{
+	  	// alert(Error-   + xmlhttp.status + ":"  + xmlhttp.statusText);
+	  		}; //end if
+	  	// console.log(this.readyState);
+	}; //end onreadystate
+
+	xmlhttp.open("GET", "news.json", true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+	xmlhttp.send();
+
+} // end init function
+    </script>
