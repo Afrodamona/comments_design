@@ -1,0 +1,254 @@
+@import url("/helper.css");
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+nav {
+  height: 15vmin;
+  width: 100vw;
+  padding-top: 15px;
+  background: #dadada;
+  position: fixed;
+  z-index: 1;
+}
+
+nav .search {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav .search:active {
+  background-color: red;
+}
+
+p {
+  line-height: 1;
+}
+
+main {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: transparent;
+  position: absolute;
+  width: 77%;
+  left: 150px;
+  top: 110px;
+  z-index: inset;
+}
+
+aside {
+  height: 870px;
+  padding-top: 150px;
+  width: 150px;
+  background-color: #dadada;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-micvidbel {
+    display: none;
+  }
+  .search_btn {
+    width: 230px;
+  }
+  .login_signin {
+    display: none;
+  }
+  #main_display {
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: transparent;
+    height: 100vh;
+  }
+  #main_display .video_box-container {
+    border-radius: 50px;
+    padding-left: 25px;
+  }
+  #main_display .video_box-container .video-box {
+    width: 400px;
+    height: 350px;
+  }
+  #main_display .video_box-container .video-box .iframe {
+    width: 400px;
+    height: 250;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search_btn {
+    position: relative;
+    right: 300px;
+    width: 500px;
+    background-color: red;
+  }
+  .search_btn input {
+    width: 450px;
+    height: inherit;
+  }
+  .login_signin {
+    position: relative;
+    right: 250px;
+  }
+  .login_signin li {
+    font-weight: 400;
+    list-style: none;
+    margin-left: 40px;
+    font-size: 22px;
+  }
+  .login_signin li:hover {
+    text-decoration: underline;
+  }
+  .logo {
+    position: relative;
+    left: 70px;
+  }
+  .nav-micvidbel {
+    position: relative;
+    right: 150px;
+    top: 10px;
+  }
+  .microphone {
+    display: none;
+  }
+  .vid-not {
+    display: none;
+  }
+  #main_display, #main_display2 {
+    width: 92%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #main_display .video_box-container, #main_display2 .video_box-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    left: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main_display .video_box-container .video-box, #main_display2 .video_box-container .video-box {
+    margin-bottom: 150px;
+  }
+  #main_display .video_box-container .video-box .video_info, #main_display2 .video_box-container .video-box .video_info {
+    background-color: rgba(54, 2, 2, 0.932);
+  }
+}
+
+.vid_displayer {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 500px;
+}
+
+.left_cover {
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#reaction_block {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  left: 150px;
+  top: 20px;
+  background-color: transparent;
+  overflow: hidden;
+  overflow: scroll;
+}
+
+#reaction_block .comment_ground {
+  width: inherit;
+  height: 100vh;
+  background-color: transparent;
+  border: solid 2px black;
+}
+
+#reaction_block .comment {
+  width: inherit;
+  height: auto;
+  background-color: red;
+}
+
+#reaction_block .comment .btn {
+  height: 30px;
+  width: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .vid_displayer {
+    width: 100%;
+  }
+  .vid_displayer #displayer {
+    width: 100%;
+  }
+  .left {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: visible;
+    overflow-x: scroll;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #main_display2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+  #main_display2 .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: content;
+        -ms-flex: content;
+            flex: content;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: 20px;
+  }
+  #main_display2 .left .left_video-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 30px;
+  }
+  #reaction_block {
+    background-color: red;
+    position: absolute;
+    top: 670px;
+    width: 900px;
+    height: 315px;
+    margin-left: 10px;
+  }
+  #reaction_block .comment_ground {
+    background-color: #fff;
+  }
+}
+
+#bars_aside {
+  height: 900px;
+  width: 25vh;
+  position: absolute;
+  top: 10px;
+  z-index: 3;
+  background-color: #dadada;
+}
+
+#bars_aside li {
+  list-style: none;
+  font-size: 21px;
+  color: grey;
+}
+/*# sourceMappingURL=index.css.map */
